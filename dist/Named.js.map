@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/Named.ts"],"sourcesContent":["export type Locales = \"en\" | \"jp\" | \"id\" | \"kr\" | \"cn-S\" | \"cn-T\"\r\n\r\nexport type LocaleString = Partial<{\r\n    [key in Locales]: string\r\n}>\r\n\r\nexport default interface INamed {\r\n    name: LocaleString\r\n}\r\n"],"mappings":";;;;;;;;;;;;;;;AAAA;AAAA;","names":[]}
