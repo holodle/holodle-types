@@ -1,9 +1,9 @@
 {
   "name": "holodle-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Type definitions for holodle.",
   "scripts": {
-    "build": "tsup ./src"
+    "build": "tsup"
   },
   "files": [
     "dist",
@@ -11,14 +11,14 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/main.js",
+      "import": "./dist/main.mjs",
+      "types": "./dist/main.d.ts"
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/main.js",
+  "module": "./dist/main.mjs",
+  "types": "./dist/main.d.ts",
   "author": "",
   "license": "ISC",
   "devDependencies": {
