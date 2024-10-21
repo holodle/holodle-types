@@ -1,28 +1,31 @@
 {
-  "name": "holodle-types",
-  "version": "0.0.2",
-  "description": "Type definitions for holodle.",
-  "scripts": {
-    "build": "tsup"
-  },
-  "files": [
-    "dist",
-    "package.json"
-  ],
-  "exports": {
-    ".": {
-      "require": "./dist/main.js",
-      "import": "./dist/main.mjs",
-      "types": "./dist/main.d.ts"
+    "name": "holodle-types",
+    "version": "0.0.2",
+    "description": "Common type definitions for holodle.",
+    "author": "HuzzNZ",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/holodle/holodle-types.git"
+    },
+    "scripts": {
+        "build": "tsup"
+    },
+    "files": [
+        "dist",
+        "package.json"
+    ],
+    "exports": {
+        ".": {
+            "require": "./dist/main.js",
+            "import": "./dist/main.mjs",
+            "types": "./dist/main.d.ts"
+        }
+    },
+    "main": "./dist/main.js",
+    "module": "./dist/main.mjs",
+    "types": "./dist/main.d.ts",
+    "devDependencies": {
+        "tsup": "^8.3.0",
+        "typescript": "^5.6.3"
     }
-  },
-  "main": "./dist/main.js",
-  "module": "./dist/main.mjs",
-  "types": "./dist/main.d.ts",
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "tsup": "^8.3.0",
-    "typescript": "^5.6.3"
-  }
 }
