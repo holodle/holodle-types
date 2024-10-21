@@ -3,6 +3,7 @@ import Generation, { IGeneration } from "./Generation"
 
 export interface ITalent extends INamed {
     id: string
+    aliases: LocaleString[]
     generations: IGeneration[]
     birthday: string
     anniversary: string
@@ -17,6 +18,7 @@ export interface ITalent extends INamed {
 export default class Talent implements ITalent {
     id: string
     name: LocaleString
+    aliases: LocaleString[]
     generations: Generation[]
     birthday: string
     anniversary: string
@@ -34,6 +36,7 @@ export default class Talent implements ITalent {
     constructor(obj?: Partial<ITalent>) {
         this.id = obj?.id ?? ""
         this.name = obj?.name ?? { en: "Default" }
+        this.aliases = obj?.aliases ?? []
         this.generations = (obj?.generations ?? [{}]).map((g: Partial<IGeneration>) => new Generation(g))
         this.birthday = obj?.birthday ?? "0101"
         this.anniversary = obj?.anniversary ?? "0101"

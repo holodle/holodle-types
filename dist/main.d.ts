@@ -1,5 +1,7 @@
 type Locales = "en" | "jp" | "id" | "kr" | "cn-S" | "cn-T";
-type LocaleString = Partial<{
+type LocaleString = {
+    "en": string;
+} & Partial<{
     [key in Locales]: string;
 }>;
 interface INamed {
@@ -32,6 +34,7 @@ declare class Generation implements IGeneration {
 
 interface ITalent extends INamed {
     id: string;
+    aliases: LocaleString[];
     generations: IGeneration[];
     birthday: string;
     anniversary: string;
@@ -45,6 +48,7 @@ interface ITalent extends INamed {
 declare class Talent implements ITalent {
     id: string;
     name: LocaleString;
+    aliases: LocaleString[];
     generations: Generation[];
     birthday: string;
     anniversary: string;
